@@ -8,9 +8,9 @@ const Board = () => {
     return <div className='board'>
 
         <div className='tiles'>
-            {ranks.map((rank,i) =>
-                files.map((file,j) =>
-                    <div>(rank)(file)</div>
+            {ranks.map((rank, i) =>
+                files.map((file, j) =>
+                    <div>(ranks)(files)</div>
                 )
             )}
         </div>
