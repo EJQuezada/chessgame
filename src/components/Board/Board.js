@@ -14,6 +14,8 @@ const Board = () => {
 
     return <div className='board'>
 
+        
+
         <div className='tiles'>
             {ranks.map((rank, i) =>
                 files.map((file, j) =>

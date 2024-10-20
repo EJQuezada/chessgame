@@ -1,5 +1,7 @@
 .board {
-
+    display: grid;
+    position: relative;
+    grid-template-columns: ;
 }
 
 .tiles {
@@ -9,7 +11,7 @@
    width: calc(8*var(--tile-size));
 }
 .tile {
-
+    position: relative;
 }
 .tile--light{
     background: var(--light-tile);

@@ -5,8 +5,6 @@ html,body{
   padding: 0;
 }
 
-
-
 .App {
   display: grid;
   place-content: center;
