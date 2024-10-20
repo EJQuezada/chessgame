@@ -1,7 +1,7 @@
 import { getCharacter } from '../../helper'
 import './Board.css'
-import 'Files' from './bits/Files'
-import 'Ranks' from './bits/Ranks'
+import Files from './bits/Files'
+import Ranks from './bits/Ranks'
 
 const Board = () => {
 
