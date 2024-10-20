@@ -1,5 +1,7 @@
 import { getCharacter } from '../../helper'
 import './Board.css'
+import 'Files' from './bits/Files'
+import 'Ranks' from './bits/Ranks'
 
 const Board = () => {
 
@@ -14,7 +16,7 @@ const Board = () => {
 
     return <div className='board'>
 
-        
+        <Ranks ranks={ranks}/>
 
         <div className='tiles'>
             {ranks.map((rank, i) =>
@@ -23,6 +25,8 @@ const Board = () => {
                 )
             )}
         </div>
+
+        <Files files={files} />
 
     </div>
 }
