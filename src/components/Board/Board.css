@@ -1,7 +1,7 @@
 .board {
     display: grid;
     position: relative;
-    grid-template-columns: ;
+    grid-template-columns: calc(.25*var(--tile-size)) calc(8*var(--tile-size));
 }
 
 .tiles {
