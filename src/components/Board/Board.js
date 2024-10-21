@@ -1,4 +1,5 @@
 import { getCharacter } from '../../helper'
+import Pieces from '../Pieces/Pieces'
 import './Board.css'
 import Files from './bits/Files'
 import Ranks from './bits/Ranks'
@@ -25,6 +26,8 @@ const Board = () => {
                 )
             )}
         </div>
+
+        <Pieces />
 
         <Files files={files} />
 
