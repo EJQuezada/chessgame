@@ -4,5 +4,4 @@
     right: 0;
     top: 0;
     bottom: calc(.25*var(--tile-size));
-    background-color: rgba(200,0,0,.5) ;
 }
