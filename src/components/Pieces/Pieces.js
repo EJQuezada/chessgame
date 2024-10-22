@@ -5,7 +5,11 @@ const Pieces = () => {
     const position = new Array(8).fill('').map(x=> new Array(8).fill(''))
 
     position[0][0] = 'wr'
+    position[1][7] = 'wn'
+    position[0][0] = 'wq'
+    position[0][0] = 'wb'
     position[7][7] = 'br'
+    position[7][7] = 'bn'
     
     console.log(position);
 
