@@ -10,7 +10,7 @@ const Pieces = () => {
     const onDrop = e => {
         console.log(e.dataTransfer.getData('text'));
     }
-    const onDragOver = e => console.log('on drag over');
+    const onDragOver = e => e.preventDefault()
     
     return <div
         onDrop={onDrop}
