@@ -7,12 +7,14 @@ const Pieces = () => {
 
     const [state,setState] = useState(createPosition())
     
-    const onDrop = e => (
+    const onDrop = e => {
         console.log(e.dataTransfer.getData('text'));
-    )
+    }
+    const onDragOver = e => console.log('on drag over');
     
     return <div
         onDrop={onDrop}
+        onDragOver={onDragOver}
         className='pieces'>
         {state.map((r,rank) =>
             r.map((f,file) => 
