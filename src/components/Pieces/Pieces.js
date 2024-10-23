@@ -23,7 +23,7 @@ const Pieces = () => {
                         key={rank+'-'+file}    
                         rank={rank}
                         file={file}
-                        piece={position[rank][file]}
+                        piece={state[rank][file]}
                     />
                 : null
         ))}
