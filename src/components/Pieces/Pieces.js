@@ -7,7 +7,12 @@ const Pieces = () => {
 
     const [state,setState] = useState(createPosition())
     
-    return <div 
+    const onDrop = e => (
+        console.log(e.dataTransfer.getData('text'));
+    )
+    
+    return <div
+        onDrop={onDrop}
         className='pieces'>
         {state.map((r,rank) =>
             r.map((f,file) => 
