@@ -9,6 +9,7 @@ const Pieces = () => {
     
     const onDrop = e => {
         const [p,rank,file] = e.dataTransfer.getData('text').split(',')
+        console.log(p,rank,file);
     }
     const onDragOver = e => e.preventDefault()
     
