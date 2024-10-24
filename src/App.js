@@ -9,7 +9,6 @@ function App() {
         <Board/>
       </div>
     </AppContext.Provider>
-    
   );
 }
 
