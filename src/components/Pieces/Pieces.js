@@ -13,7 +13,7 @@ const Pieces = () => {
         const {width, left, top} = ref.current.getBoundingClientRect()
         const size = width / 8
         const y = Math.floor((e.clientX - left) / size)
-        const x = 7- Math.floor((e.clientY - top) / size)
+        const x = 7 - Math.floor((e.clientY - top) / size)
         return (x,y)
     }
 
