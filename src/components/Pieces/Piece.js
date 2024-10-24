@@ -1,8 +1,10 @@
+
 const Piece = ({
     rank, 
     file, 
     piece, 
 }) => {
+
 
     const onDragStart = e => {
         e.dataTransfer.effectAllowed = 'move'
@@ -12,10 +14,13 @@ const Piece = ({
         },0)
     }
 
+    const onDragEnd = e => e.target.style.display = 'block'
+
     return (
         <div 
             className={`piece ${piece} p-${file}${rank}`}
             draggable={true}
+            onDragEnd={onDragEnd}
             onDragStart={onDragStart}
         />
     )
