@@ -14,7 +14,7 @@ const Pieces = () => {
         const size = width / 8
         const y = Math.floor((e.clientX - left) / size)
         const x = 7 - Math.floor((e.clientY - top) / size)
-        return (x,y)
+        return {x,y}
     }
 
     const onDrop = e => {
