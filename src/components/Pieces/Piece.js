@@ -1,3 +1,4 @@
+import arbiter from '../../arbiter/arbiter';
 import { useAppContext } from '../../contexts/Context'
 
 const Piece = ({
@@ -49,7 +50,7 @@ const Piece = ({
             e.target.style.display = 'none'
         },0)
         if (turn === piece[0]) {
-            const candidateMoves = getMoves()
+            const candidateMoves = arbiter.getRegularMoves({position:currentPosition,piece,rank,file})
             console.log(candidateMoves);
         }
     }
