@@ -51,7 +51,7 @@ const Piece = ({
         },0)
         if (turn === piece[0]) {
             const candidateMoves = arbiter.getRegularMoves({position:currentPosition,piece,rank,file})
-            console.log(candidateMoves);
+            dispatch(generateCandidateMoves({candidateMoves}))
         }
     }
     const onDragEnd = e => {
