@@ -1,20 +1,28 @@
-import actionTypes from "./actionTypes"
-
+import { Status } from "../constants";
+import actionTypes from "./actionTypes";
 export const reducer = (state, action) => {
+   
     switch (action.type) {
         case actionTypes.NEW_MOVE : {
-            let {turn,position} = state
-
-            turn = turn === 'w' ? 'b' : 'w'
-
+            let {position,turn} = state
             position = [
                 ...position,
                 action.payload.newPosition
             ]
+
+            turn = turn === 'w' ? 'b' : 'w'
+
             return {
                 ...state,
+                position,
                 turn,
-                position
+            }
+        }
+
+        case actionTypes.GENERATE_CANDIDATE_MOVES : {
+            return {
+                ...state,
+                candidateMoves : action.payload.candidateMoves
             }
         }
 
