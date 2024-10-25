@@ -35,7 +35,7 @@ const Board = () => {
                 files.map((file, j) =>
                     <div 
                         key={file+'-'+rank} 
-                        className={getClassName(9-i,j)}>
+                        className={getClassName(7-i,j)}>
                     </div>
                 )
             )}
