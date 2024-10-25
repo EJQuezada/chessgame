@@ -19,12 +19,12 @@ export const getRookMoves = (position,piece,rank,file) => {
             if (position?.[x]?.[y] === undefined)
                 break
             if (position[x][y].startsWith(enemy)){
-                moves.push([x,y])
+                moves.push ([x,y])
                 break;
             }
-            if (position[x][y].startsWith(us))
+            if (position[x][y].startsWith(us)){
                 break
-
+            }
             moves.push([x,y])
         }
     })
