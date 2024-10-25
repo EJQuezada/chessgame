@@ -1,5 +1,6 @@
 import arbiter from '../../arbiter/arbiter';
 import { useAppContext } from '../../contexts/Context'
+import { generateCandidateMoves } from '../../reducer/actions/move';
 
 const Piece = ({
     rank, 
