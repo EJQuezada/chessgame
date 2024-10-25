@@ -1,3 +1,4 @@
+import arbiter from "./arbiter"
 
 export const getRookMoves = (position,piece,rank,file) => {
     const moves = []
@@ -19,7 +20,7 @@ export const getRookMoves = (position,piece,rank,file) => {
                 break
             if (position[x][y].startsWith(enemy)){
                 moves.push([x,y])
-                break
+                break;
             }
             if (position[x][y].startsWith(us))
                 break
@@ -27,4 +28,6 @@ export const getRookMoves = (position,piece,rank,file) => {
             moves.push([x,y])
         }
     })
+
+    return moves
 }
