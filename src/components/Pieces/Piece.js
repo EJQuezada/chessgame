@@ -1,4 +1,4 @@
-import { useAppContext } from "../../contexts/Context"
+import { useAppContext } from '../../contexts/Context'
 
 const Piece = ({
     rank, 
@@ -7,7 +7,7 @@ const Piece = ({
 }) => {
 
     const {appState, dispatch} = useAppContext()
-    const {turn, position} = appState;
+    const {turn, position} =appState;
     const currentPosition = position[position.length - 1]
 
     const getMoves = () => {
@@ -43,8 +43,8 @@ const Piece = ({
     }
 
     const onDragStart = e => {
-        e.dataTransfer.effectAllowed = 'move'
-        e.dataTransfer.setData('text/plain',`${piece},${rank},${file}`)
+        e.dataTransfer.effectAllowed = "move"
+        e.dataTransfer.setData("text/plain",`${piece},${rank},${file}`)
         setTimeout(() => {
             e.target.style.display = 'none'
         },0)
