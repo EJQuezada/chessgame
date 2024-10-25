@@ -7,7 +7,7 @@ const Piece = ({
 }) => {
 
     const {appState, dispatch} = useAppContext()
-    const {turn, position} =appState;
+    const {turn, position} = appState;
     const currentPosition = position[position.length - 1]
 
     const getMoves = () => {
