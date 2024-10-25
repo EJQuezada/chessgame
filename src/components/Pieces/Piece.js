@@ -28,11 +28,11 @@ const Piece = ({
                 const y = file + (i*dir[1])
                 if (currentPosition?.[x]?.[y] === undefined)
                     break
-                if (currentPosition[x][y].startWith(enemy)){
+                if (currentPosition[x][y].startsWith(enemy)){
                     moves.push([x,y])
                     break
                 }
-                if (currentPosition[x][y].startWith(us))
+                if (currentPosition[x][y].startsWith(us))
                     break
 
                 moves.push([x,y])                
