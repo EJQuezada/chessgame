@@ -3,7 +3,7 @@ import Piece from './Piece'
 import { useState, useRef } from 'react'
 import { createPosition, copyPosition } from '../../helper'
 import { useAppContext } from '../../contexts/Context'
-import { makeNewMove } from '../../reducer/actions/move'
+import { clearCandidates, makeNewMove } from '../../reducer/actions/move'
 
 const Pieces = () => {
     const ref = useRef()
@@ -34,7 +34,9 @@ const Pieces = () => {
             newPosition[x][y] = p
             dispatch(makeNewMove({newPosition}))
         }
-        
+
+        dispatch(clearCandidates())
+
     }
 
     const onDragOver = e => e.preventDefault()
