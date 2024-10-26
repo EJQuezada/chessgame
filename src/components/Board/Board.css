@@ -19,3 +19,14 @@
 .tile--dark{
     background: var(--dark-tile);
 }
+.highlight:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: calc(.5*var(--tile-size));
+    height: calc(.5*var(--tile-size));
+    background: var(--highlight);
+    border-radius: 50%;
+    left: 25%;
+    top: 25%;
+}
