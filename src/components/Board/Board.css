@@ -30,3 +30,14 @@
     left: 25%;
     top: 25%;
 }
+.attacking:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: calc(var(--tile-size) - 12px);
+    height: calc(var(--tile-size) - 12px);
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    border: 6px solid red; 
+}
