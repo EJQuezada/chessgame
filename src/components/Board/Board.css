@@ -39,5 +39,5 @@
     border-radius: 50%;
     left: 0;
     top: 0;
-    border: 6px solid red; 
+    border: 6px solid var(--highlight); 
 }
