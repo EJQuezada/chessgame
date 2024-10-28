@@ -100,7 +100,7 @@ export const getKingMoves = ({position,piece,rank,file}) => {
     const direction = [
         [1,-1],[1,0],[1,1],
         [0,-1],      [0,1],
-        [-1,1],[-1,0],[-1,1],
+        [-1,-1],[-1,0],[-1,1],
     ]
 
     direction.forEach(dir => {
