@@ -1,4 +1,4 @@
-//import arbiter from "./arbiter"
+import arbiter from "./arbiter"
 
 export const getRookMoves = ({position,piece,rank,file}) => {
     const moves = []
@@ -118,7 +118,7 @@ export const getPawnMoves = ({position,piece,rank,file}) => {
     //Move two tiles on first move
     if (rank % 5 === 1){
         if (!position?.[rank+dir]?.[file] === '' && position?.[rank+dir+dir]?.[file] === ''){
-            moves.push([rank+dir+dir,file])
+            moves.push ([rank+dir+dir,file])
         }
     }
     
@@ -126,6 +126,6 @@ export const getPawnMoves = ({position,piece,rank,file}) => {
     if (!position?.[rank+dir]?.[file]){
         moves.push([rank+dir,file])
     }
-    
+
     return moves
 }
