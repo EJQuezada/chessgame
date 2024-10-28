@@ -136,24 +136,24 @@ export const getPawnMoves = ({position,piece,rank,file}) => {
 export const getPawnCaptures = ({position,prevPosition,piece,rank,file}) => {
     
     const moves = []
-    const dir = piece === 'wp' ? 1 : -1
+    const dir = piece==='wp' ? 1 : -1
     const enemy = piece[0] === 'w' ? 'b' : 'w'
 
     //Capture enemy to left
     if (position?.[rank+dir]?.[file-1] && position[rank+dir][file-1].startsWith(enemy) ) {
-        moves.push([rank+dir,file-1])
+        moves.push ([rank+dir,file-1])
     }
 
-    //apture enemy to right
+    //Capture enemy to right
     if (position?.[rank+dir]?.[file+1] && position[rank+dir][file+1].startsWith(enemy) ) {
-        moves.push([rank+dir,file+1])
+        moves.push ([rank+dir,file+1])
     }
 
     //En-Passant
     //Check if enemy moved twice in last round
     const enemyPawn = dir === 1 ? 'bp' : 'wp'
     const adjacentFiles = [file-1,file+1]
-    if (prevPosition){
+    if(prevPosition){
         if ((dir === 1 && rank === 4) || (dir === -1 && rank === 3)){
             adjacentFiles.forEach (f => {
                 if (position?.[rank]?.[f] === enemyPawn &&
