@@ -118,6 +118,11 @@ export const getPawnMoves = ({position,piece,rank,file}) => {
     if (!position?.[rank+dir][file]){
         moves.push([rank+dir,file])
     }
+    
+    if (rank % 5 === 1){
+        if (!position?.[rank+dir]?.[file] === '' && position?.[rank+dir+dir]?.[file] ===){
+            moves.push([rank+dir+dir,file])
+        }
 
     return moves
 }
