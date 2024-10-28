@@ -111,3 +111,11 @@ export const getKingMoves = ({position,piece,rank,file}) => {
     })
     return moves
 }
+export const getPawnMoves = ({position,piece,rank,file}) => {
+    const moves = []
+    const dir = piece === 'wp' ? 1 : -1
+
+    if (!position?.[rank+dir][file]){
+        moves.push([rank+dir,file])
+    }
+}
