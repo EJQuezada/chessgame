@@ -118,4 +118,6 @@ export const getPawnMoves = ({position,piece,rank,file}) => {
     if (!position?.[rank+dir][file]){
         moves.push([rank+dir,file])
     }
+
+    return moves
 }
