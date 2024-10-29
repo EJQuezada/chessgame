@@ -1,4 +1,4 @@
-import arbiter from "./arbiter"
+import arbiter from './arbiter'
 
 export const getRookMoves = ({position,piece,rank,file}) => {
     const moves = []
