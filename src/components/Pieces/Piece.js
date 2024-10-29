@@ -45,7 +45,7 @@ const Piece = ({
     }
 
     const onDragStart = e => {
-        e.dataTransfer.effectAllowed = "move"
+        e.dataTransfer.effectAllowed = "move";
         e.dataTransfer.setData("text/plain",`${piece},${rank},${file}`)
         setTimeout(() => {
             e.target.style.display = 'none'
@@ -57,8 +57,8 @@ const Piece = ({
                     position : currentPosition[currentPosition.length - 1],
                     prevPosition : currentPosition[currentPosition.length - 2],
                     piece,
+                    file,
                     rank,
-                    file
                 })
             dispatch(generateCandidateMoves({candidateMoves}))
         }

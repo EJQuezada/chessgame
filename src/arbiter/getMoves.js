@@ -166,6 +166,6 @@ export const getPawnCaptures = ({position,prevPosition,piece,rank,file}) => {
         }
     }
 
-    
+
     return moves
 }
