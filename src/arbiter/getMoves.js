@@ -114,22 +114,21 @@ export const getKingMoves = ({position,piece,rank,file}) => {
 }
 
 export const getPawnMoves = ({position,piece,rank,file}) => {
-    
     const moves = []
     const dir = piece === 'wp' ? 1 : -1
-
-    //Move two tiles on first move
+    
+    //Move one tile subsequently
+        if (!position?.[rank+dir][file]){
+            moves.push([rank+dir,file])
+        }
+    
+        //Move two tiles on first move
     if (rank % 5 === 1){
         if (position?.[rank+dir]?.[file] === '' && position?.[rank+dir+dir]?.[file] === ''){
             moves.push ([rank+dir+dir,file])
         }
     }
     
-    //Move one tile subsequently
-    if (!position?.[rank+dir]?.[file]){
-        moves.push ([rank+dir,file])
-    }
-
     return moves
 }
 
