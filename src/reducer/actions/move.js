@@ -13,7 +13,7 @@ export const clearCandidates = () =>{
     }
 }
 
-export const generateCandidates = ({candidateMoves}) =>{
+export const generateCandidateMoves = ({candidateMoves}) =>{
     return {
         type : actionTypes.GENERATE_CANDIDATE_MOVES,
         payload : {candidateMoves},
