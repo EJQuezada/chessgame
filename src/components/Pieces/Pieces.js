@@ -6,11 +6,10 @@ import { useAppContext } from '../../contexts/Context'
 import { clearCandidates, makeNewMove } from '../../reducer/actions/move'
 
 const Pieces = () => {
-    const ref = useRef()
-
     const {appState,dispatch} = useAppContext()
-
     const currentPosition = appState.position[appState.position.length-1]
+    
+    const ref = useRef()
     
     const calculateCoords = e => {
         const {width, left, top} = ref.current.getBoundingClientRect()
@@ -20,7 +19,6 @@ const Pieces = () => {
         
         return {x,y}
     }
-
 
     const onDrop = e => {
         e.preventDefault()
@@ -39,13 +37,13 @@ const Pieces = () => {
 
     }
 
-    const onDragOver = e => e.preventDefault()
+    const onDragOver = e => {e.preventDefault()}
     
     return <div
+        className='pieces'
         ref={ref}
         onDrop={onDrop}
-        onDragOver={onDragOver}
-        className='pieces'>
+        onDragOver={onDragOver} >
         {currentPosition.map((r,rank) =>
             r.map((f,file) => 
                 currentPosition[rank][file]
