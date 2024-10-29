@@ -19,7 +19,7 @@ const arbiter = {
             //    ...getPawnCaptures({position,prevPosition,piece,rank,file})
         
         
-            ]
+            //]
             //return getPawnMoves({position,piece,rank,file});
     },
 }
