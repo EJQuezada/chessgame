@@ -6,7 +6,7 @@ import { useAppContext } from '../../contexts/Context'
 import { clearCandidates, makeNewMove } from '../../reducer/actions/move'
 
 const Pieces = () => {
-    const {appState,dispatch} = useAppContext()
+    const {appState,dispatch} = useAppContext();
     const currentPosition = appState.position[appState.position.length-1]
     
     const ref = useRef()
@@ -54,7 +54,8 @@ const Pieces = () => {
                         piece={currentPosition[rank][file]}
                     />
                 : null
-        ))}
+            )
+        )}
     </div>
 }
 
