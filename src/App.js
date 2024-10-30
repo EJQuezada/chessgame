@@ -3,20 +3,14 @@ import './App.css';
 import Board from './components/Board/Board';
 import AppContext from './contexts/Context';
 import { reducer } from './reducer/reducer';
-import { initGameState } from './constants';
-
 
 function App() {
 
-  const [appState, dispatch] = useReducer(reducer,initGameState);
+  const [appState, dispatch] = useReducer(reducer,{})
   
-  const providerState= {
-    appState,
-    dispatch
-  }  
-
+  
   return (
-    <AppContext.Provider value={providerState} >
+    <AppContext.Provider value={{}} >
       <div className="App">
         <Board/>
       </div>

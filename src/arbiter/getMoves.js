@@ -1,4 +1,4 @@
-import arbiter from "./arbiter"
+//import arbiter from "./arbiter"
 
 export const getRookMoves = ({position,piece,rank,file}) => {
     const moves = []
@@ -13,7 +13,7 @@ export const getRookMoves = ({position,piece,rank,file}) => {
     ]
 
     direction.forEach(dir => {
-        for (let i = 1; i <= 8; i++) {
+        for (let i = 1; i < 8; i++) {
             const x = rank + (i*dir[0])
             const y = file + (i*dir[1])
             if (position?.[x]?.[y] === undefined)
@@ -68,7 +68,7 @@ export const getBishopMoves = ({position,piece,rank,file}) => {
     ]
 
     direction.forEach(dir => {
-        for (let i = 1; i <= 8; i++) {
+        for (let i = 1; i < 8; i++) {
             const x = rank + (i*dir[0])
             const y = file + (i*dir[1])
             if (position?.[x]?.[y] === undefined)
