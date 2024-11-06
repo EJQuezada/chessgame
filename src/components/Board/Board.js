@@ -1,3 +1,4 @@
+import { getCharacter } from '../../helper'
 import './Board.css'
 
 import Ranks from './bits/Ranks'
