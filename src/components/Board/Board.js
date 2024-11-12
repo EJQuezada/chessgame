@@ -27,8 +27,8 @@ const Board = () => {
        return c
     }
 
-    const ranks = Array(8).fill().map((x,i) => 8-i)
-    const files = Array(8).fill().map((x,i) => getCharacter(i))
+    //const ranks = Array(8).fill().map((x,i) => 8-i)
+    //const files = Array(8).fill().map((x,i) => getCharacter(i))
 
     return <div className='board'>
 
