@@ -8,7 +8,7 @@ import { useAppContext } from '../../contexts/Context'
 
 const Board = () => {
     const ranks = Array(8).fill().map((x,i) => 8-i)
-    const files = Array(8).fill().map((x,i) => i+1)
+    const files = Array(8).fill().map((x,i) => getCharacter(1))
 
     const {appState} = useAppContext()
     const position = appState.position[appState.position.length -1]
