@@ -40,7 +40,6 @@ const Board = () => {
                     <div 
                         key={file+'-'+rank} 
                         className={getClassName(7-i,j)}>
-                            {rank}{file}
                     </div>
                 )
             )}
